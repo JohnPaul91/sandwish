@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Animated login form</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+	<form action="https://sheetdb.io/api/v1/v8iezdq4fyf8u" method="post" id="sheetdb-form" ></form>
+
+<div class="menu__bar">
+	<h1 class="logo">Light<span>Code.</span></h1>
+	
+	<ul>
+		
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Pages<i class="fas fa-caret-down"></i><a>
+			
+			<div class="dropdown__menu">
+				<ul>
+					<li><a href="index4.html">Grades</a></li>
+					<li><a href="#">payment</a></li>
+					<li>
+					<a href="#">Home<i class="fas fa-caret-right"></i></a>
+						<div class="dropdown__menu-1">
+							<ul>
+								<li><a href="#">Home-1</a></li>
+								<li><a href="#">Home-2</a></li>
+								<li><a href="#">Home-3</a></li>
+								
+							</ul>
+							</div>
+						
+							<li><a href="#">Home</a></li>
+						
+				</ul>
+			</div>
+			</li>	
+		<li><a href="index3.html">Logout</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	</div>
+
+
+	<div class="center">
+	<h1>Login</h1>
+	<form method="POST">
+	<div class="txt_field">
+		<input type="text" required>
+	
+		 <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="data[Username]" required>
+		</div>
+		<div class="txt_field">
+		<input type="password" required>
+		<label for="password"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="data[Password]" required>
+		</div>
+		<div class="pass">Forgot Password</div>
+		
+		<center>
+		<a href="index3.html">
+		<input type="Login" value="Login"></a></center>
+		<div class="signup_link">
+		not a member? <a href="index2.html">Signup</a>
+
+
+
+	<script>
+		var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('d.html', '_blank');
+
+          });
+        });
+
+	</script>
+		</form>
+		</div>
+</body>
+</html>
